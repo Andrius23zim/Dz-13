@@ -1,0 +1,168 @@
+
+
+
+    header {
+        grid-area: header;
+    }
+
+    aside {
+        grid-area: aside;
+    }
+
+    main {
+        grid-area: main;
+    }
+
+    .banner {
+        grid-area: banner;
+        display: none;
+    }
+
+    footer {
+        grid-area: footer;
+    }
+
+    #Gridbox {
+        min-height: 100vh;
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-areas: "header"
+                              "aside"
+                              "main"
+                              "banner"
+                             "footer";
+        
+    }
+
+    /*aside*/
+
+    .aside-nav {
+        background-color: rgb(58, 58, 58);
+    }
+
+    img {
+        width: 100%;
+        height: 30rem;
+        object-fit: cover;
+    }
+
+    p {
+        font-weight: 700;
+    }
+    
+
+    .a {
+        background-image: url(../img/photo-card1.avif);
+        background-size: cover;
+      
+    }
+    
+    .b {
+        background-image: url(../img/photo-card.avif);
+        background-size: cover;
+    }
+    
+    .c {
+        background-image: url(../img/photo-cars3.avif);
+        background-size: cover;
+    }
+
+
+    .aside-photo {
+        display: grid;
+        grid-auto-rows: 170px;
+        grid-template-areas: "a" 
+                             "b"
+                             "c";
+        gap: 20px;
+        margin-top: 10px; 
+    }
+
+
+    /* main */
+
+    .main-box {
+        display: grid;
+        grid-template-rows: auto;
+        gap: 20px;
+        padding-top: 10px;
+        grid-template-areas: "a1"
+                             "b2" 
+                             "v3" 
+                             "c4"
+                             "g5" 
+                             "y6" 
+                             "q7" 
+                             "f8";            
+    }
+
+ /*footer*/
+
+    .p {
+        grid-area: p;
+    }
+    
+    .l {
+        grid-area: l;
+    }
+    
+    .m {
+        grid-area: m;
+    }
+    
+    .o {
+        grid-area: o;
+    }
+    
+    .footer {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1fr;
+        grid-template-areas: "p" 
+                             "l"
+                             "m"  
+                             "o";
+         
+    }
+
+    .OpenCart {
+        background: black;
+    }
+
+
+
+
+
+    @media (min-width:760px) {
+      
+        .aside-photo {
+            grid-auto-rows: 170px;
+            grid-template-areas: "a b c";
+            gap: 20px;
+            margin-top: 10px; 
+        }
+        
+        
+        .main-box {
+            grid-template-rows: auto;
+            gap: 20px;
+            padding-top: 10px;
+            grid-template-areas: "a1 b2 v3 c4"
+                                 "g5 y6 q7 f8";       
+        }
+        
+        
+        .footer {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-areas: "p l m o";
+        }
+        
+        
+        .banner {
+            display: block;
+        }
+        
+    
+        }
